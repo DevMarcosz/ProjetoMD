@@ -18,5 +18,5 @@ Projedo de Criptografia RSA do 1º Periodo da cadeira de Matematica Discreta.
 ## Desenvolvedores/Contribuintes :octocat:
 
 
-| [<img src="https://avatars.githubusercontent.com/u/99209886?v=4" width=115><br><sub>Edvar Monteiro</sub>](https://github.com/edvar82) |  [<img src="https://avatars.githubusercontent.com/u/14898947?s=96&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/DevMarcosz) |  
+| [<img src="https://avatars.githubusercontent.com/u/99209886?v=4" width=115><br><sub>Edvar Monteiro</sub>](https://github.com/edvar82) |  [<img src="https://avatars.githubusercontent.com/u/14898947?s=96&v=4" width=115><br><sub>Marcos Douglas</sub>](https://github.com/DevMarcosz) |  
 | :---: | :---: | 
