@@ -31,7 +31,7 @@ Projedo de Criptografia RSA do 1º Periodo da cadeira de Matematica Discreta.
 > ```
 > Já pasta da aplicação em seu terminal, digite o seguinte comando:
 > ```
-> 	gcc projeto.c -o exe -lm
+> 	gcc main.c -o exe -lm
 > ```
 > 	Logo depois
 > ```
