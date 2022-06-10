@@ -12,7 +12,7 @@ Projedo de Criptografia RSA do 1º Periodo da cadeira de Matematica Discreta.
 1. Gerar chave publica, onde usamos a peculiaridade dos numeros primos para cria-las;<br>
 2. Assim que criado, o Programa cria um arquivo txt com as duas chaves;<br>
 3. Depois da criação das chaves, o Programa tem a opção de ENCRIPTAR o texto e salvar a mensagem ENCRIPTADA em um arquivo txt;<br>
-4. Apos isso, o Usuario poderar DESINCRIPTAR a mensagem, usando as chaves privadas. <br>
+4. Apos isso, o Usuario poderar DESENCRIPTAR a mensagem, usando as chaves privadas. <br>
 </p>
 
 ## Desenvolvedores/Contribuintes :octocat:
