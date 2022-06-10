@@ -15,6 +15,30 @@ Projedo de Criptografia RSA do 1º Periodo da cadeira de Matematica Discreta.
 4. Apos isso, o Usuario poderar DESENCRIPTAR a mensagem, usando as chaves privadas. <br>
 </p>
 
+<h2> Instalação </h2>
+
+<p> Para poder instalar e executar o programa, você terá que ter baixado o GCC"
+
+> Exemplo:
+>
+> Clone esse projeto em seu computador com o comando:
+> ```
+> 	git clone https://github.com/DevMarcosz/ProjetoMD
+> ```
+> Acesse a pasta do projeto seu terminal:
+> ```
+> 	cd [Nome da pasta onde você salvou]
+> ```
+> Já pasta da aplicação em seu terminal, digite o seguinte comando:
+> ```
+> 	gcc projeto.c -o exe -lm
+> ```
+> 	Logo depois
+> ```
+>         ./exe
+  </p>
+
+
 ## Desenvolvedores/Contribuintes :octocat:
 
 
