@@ -33,16 +33,32 @@ void cripto(char letras[], int tabela[], char str[], unsigned long int new[], in
     cripto(letras, tabela, str, new, n, i + 1);
 }
 
-unsigned long int pow_and_mod(long c, unsigned long int d, long long int n)
+//Calcula a forma reduzida de a^e módulo n, usando a expansão binária do expoente
+long potencia(long long a, long long e, long long n)
 {
-    unsigned long int value = 1;
-    while (d > 0)
+
+    long long A = a, P = 1, E = e;
+
+    while (1)
     {
-        value *= c;
-        value %= n;
-        d--;
+
+        if (E == 0)
+            return P;
+
+        else if (E % 2 != 0)
+        {
+
+            P = (A * P) % n;
+            E = (E - 1) / 2;
+        }
+
+        else
+        {
+            E = E / 2;
+        }
+
+        A = (A * A) % n;
     }
-    return value;
 }
 
 int finding(int tabela[], long long new[], int n, int j, int i)
@@ -75,6 +91,7 @@ void decifrar(char letra[], int tabela[], long long new[], char crip[], int n, i
     decifrar(letra, tabela, new, crip, n, i + 1);
 }
 
+//Calcula o mdc estendido e retorna o beta(inverso do e módulo phi) para ser o d
 long long gcdExtended(long long a, long long b, int *x, int *y)
 {
     if (a == 0)
@@ -150,7 +167,7 @@ int main()
 
             for (int i = 0; i < tam; i++)
             {
-                crip[i] = pow_and_mod(new[i], e, n);
+                crip[i] = potencia(new[i], e, n);
             }
 
             for (int i = 0; i < tam; i++)
@@ -200,7 +217,7 @@ int main()
 
             for (int c = 0; c < tam; c++)
             {
-                new[c] = pow_and_mod(value[c], d, n);
+                new[c] = potencia(value[c], d, n);
             }
             arq = fopen("decifrado.txt", "w");
 
@@ -218,14 +235,15 @@ int main()
         {
             printf("sAINDO...\n");
             system("read -p 'Obrigado!' var");
+            system("clear");
             exit(0);
         }
         else
         {
             printf("[ERRO] Opção invalída!\n");
             system("read -p 'Digite outro valor!' var");
+            system("clear");
         }
     }
-
     return 0;
 }
