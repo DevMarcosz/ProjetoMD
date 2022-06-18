@@ -4,6 +4,27 @@
 #include <ctype.h>
 #include <math.h>
 
+//Descobre se um número é primo verificando se ele é divisível para qualquer i até a sua raiz quadrada
+long long verificaPrimo(long long p){
+
+	long long i;
+	double j;
+	
+	//Calcula a raiz quadrada para p
+	j = sqrt(p);
+
+
+	for(i = 2; i <= j; i++){
+		//Retorna 0 caso não seja um número primo
+		if(p%i == 0)
+			return 0;
+	}
+
+	//Retorna 1 quando é um número primo
+	return 1;
+}
+
+
 int find(char letras[], char str[], int n, int j, int i)
 {
     if (str[i] == letras[j])
@@ -131,13 +152,21 @@ int main()
             system("clear");
             printf("Digite o 'p', o 'q' e o 'e' \n");
             scanf("%lld %lld %lld", &p, &q, &e);
-            n = p * q;
-            z = (p - 1) * (q - 1);
-            pont_arq = fopen("chaves.txt", "w");
-            fprintf(pont_arq, "n = %lld e = %lld", n, e);
-            fclose(pont_arq);
-            system("clear");
-            system("read -p 'Chaves criadas com sucesso!' var");
+            
+	        if(!verificaPrimo(p) || !verificaPrimo(q) || !verificaPrimo(e)){
+	    	    printf("Voce nao digitou um primo\n");
+                system("read -p 'Digite outro valor!' var");
+	        }
+            else
+            {
+                n = p * q;
+                z = (p - 1) * (q - 1);
+                pont_arq = fopen("chaves.txt", "w");
+                fprintf(pont_arq, "n = %lld e = %lld", n, e);
+                fclose(pont_arq);
+                system("clear");
+                system("read -p 'Chaves criadas com sucesso!' var");
+            }
         }
         else if (opcao == 2)
         {
@@ -233,7 +262,7 @@ int main()
         }
         else if (opcao == 4)
         {
-            printf("sAINDO...\n");
+            printf("SAINDO...\n");
             system("read -p 'Obrigado!' var");
             system("clear");
             exit(0);
@@ -244,6 +273,6 @@ int main()
             system("read -p 'Digite outro valor!' var");
             system("clear");
         }
-    }
+    }        
     return 0;
 }
